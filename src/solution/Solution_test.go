@@ -9,6 +9,7 @@ func TestAdd(t *testing.T) {
 		want int
 	}{
 		{"add positives", 2, 3, 5},
+		{"add more positives", 4, 3, 7},
 		{"add negatives", -1, -1, -2},
 		{"add mix", -5, 5, 0},
 		{"zero", 0, 0, 0},
