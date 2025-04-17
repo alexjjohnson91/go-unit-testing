@@ -12,3 +12,7 @@ func (s Solution) Add() int {
 func (s Solution) Sub() int {
   return (s.A - s.B)
 }
+
+func (s Solution) Mul() int {
+	return (s.A * s.B)
+}

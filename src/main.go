@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	x := solution.Solution{2, 3}
+	x := solution.Solution{A: 2, B: 3}
 
-	fmt.Println("solution: " + fmt.Sprint(x.Add()))
+	fmt.Println("solution: " + fmt.Sprint(x.Mul()))
 }
