@@ -8,3 +8,7 @@ type Solution struct {
 func (s Solution) Add() int {
   return (s.A + s.B)
 }
+
+func (s Solution) Sub() int {
+  return (s.A - s.B)
+}
