@@ -8,11 +8,11 @@ func TestAdd(t *testing.T) {
 		a, b int
 		want int
 	}{
-		{"add positives", 2, 3, 5},
-		{"add more positives", 4, 3, 7},
-		{"add negatives", -1, -1, -2},
-		{"add mix", -5, 5, 0},
-		{"zero", 0, 0, 0},
+		{"testing positives", 2, 3, 5},
+		{"testing positives", 4, 3, 7},
+		{"testing negatives", -1, -1, -2},
+		{"testing negatives", -5, 5, 0},
+		{"testing zeroes", 0, 0, 0},
 	}
 
 	for _, tt := range tests {
