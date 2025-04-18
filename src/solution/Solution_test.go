@@ -17,8 +17,7 @@ func TestAdd(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := Solution{}
-			got := s.Add(tt.a, tt.b)
+			got := Add(tt.a, tt.b)
 			if got != tt.want {
 				t.Errorf("Add() = %d; want %d", got, tt.want)
 			}
@@ -41,10 +40,35 @@ func TestSub(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := Solution{}
-			got := s.Sub(tt.a, tt.b)
+			got := Sub(tt.a, tt.b)
 			if got != tt.want {
 				t.Errorf("Sub() = %d; want %d", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestDiv(t *testing.T) {
+	tests := []struct {
+		name          string
+		a, b          float32
+		expected      float32
+		expectedError bool
+	}{
+		{"testing positives", 10, 2, 5, false},
+		{"testing positives", 9, 3, 3, false},
+		{"testing positives", 0, 3, 0, false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			actual, actualError := Div(tt.a, tt.b)
+			if (actualError != nil) != tt.expectedError {
+				t.Errorf("Div(%f, %f): unexpected error = %v", tt.a, tt.b, actualError)
+        return
+			}
+			if actual != tt.expected {
+				t.Errorf("Div() = %f; expected %f", actual, tt.expected)
 			}
 		})
 	}
