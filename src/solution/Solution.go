@@ -5,14 +5,14 @@ type Solution struct {
   B int
 }
 
-func (s Solution) Add() int {
-  return (s.A + s.B)
+func (s Solution) Add(a int, b int) int {
+  return (a + b)
 }
 
-func (s Solution) Sub() int {
-  return (s.A - s.B)
+func (s Solution) Sub(a int, b int) int {
+  return (a - b)
 }
 
-func (s Solution) Mul() int {
-	return (s.A * s.B)
+func (s Solution) Mul(a int, b int) int {
+  return (a * b)
 }

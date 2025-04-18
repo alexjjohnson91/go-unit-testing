@@ -17,8 +17,8 @@ func TestAdd(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := Solution{A: tt.a, B: tt.b}
-			got := s.Add()
+			s := Solution{}
+			got := s.Add(tt.a, tt.b)
 			if got != tt.want {
 				t.Errorf("Add() = %d; want %d", got, tt.want)
 			}
@@ -41,8 +41,8 @@ func TestSub(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := Solution{A: tt.a, B: tt.b}
-			got := s.Sub()
+			s := Solution{}
+			got := s.Sub(tt.a, tt.b)
 			if got != tt.want {
 				t.Errorf("Sub() = %d; want %d", got, tt.want)
 			}
