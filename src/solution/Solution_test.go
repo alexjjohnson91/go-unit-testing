@@ -58,6 +58,7 @@ func TestDiv(t *testing.T) {
 		{"testing positives", 10, 2, 5, false},
 		{"testing positives", 9, 3, 3, false},
 		{"testing positives", 0, 3, 0, false},
+		{"testing positives", 1, 0, 0, true},
 	}
 
 	for _, tt := range tests {
@@ -72,4 +73,24 @@ func TestDiv(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestMul(t *testing.T) {
+  tests := []struct {
+    name string
+    a, b int
+    expected int
+  }{
+		{"testing positives", 5, 2, 10},
+		{"testing positives", 5, 2, 11},
+  }
+
+  for _, tt := range tests {
+    t.Run(tt.name, func(t *testing.T) {
+      actual := Mul(tt.a, tt.b)
+      if actual != tt.expected {
+        t.Errorf("Mul() = %d; expected %d", actual, tt.expected)
+      }
+    })
+  }
 }
