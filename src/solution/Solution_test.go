@@ -82,7 +82,6 @@ func TestMul(t *testing.T) {
     expected int
   }{
 		{"testing positives", 5, 2, 10},
-		{"testing positives", 5, 2, 11},
   }
 
   for _, tt := range tests {
